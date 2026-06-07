@@ -14,6 +14,14 @@ config/name="multiplayer1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+HighLevelNetworkHandler="*uid://4vps7u0qpf7"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
