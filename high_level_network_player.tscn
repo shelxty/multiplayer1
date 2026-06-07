@@ -15,9 +15,11 @@ properties/0/replication_mode = 1
 script = ExtResource("1_pyacq")
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=1323745084]
+position = Vector2(201, 152)
 texture = ExtResource("2_oc4h8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=184198760]
+position = Vector2(201, 152)
 shape = SubResource("RectangleShape2D_it0ph")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=958158142]
