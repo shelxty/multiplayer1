@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bcmnwtnp6cvp2"]
+
+[ext_resource type="Texture2D" uid="uid://4ar3m76ynwu0" path="res://assets/heaven_bg.png" id="1_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://pxsvynw0l5yx" path="res://assets/vivian_odette.png" id="2_tlwt5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
+size = Vector2(1280, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_036b0"]
+size = Vector2(300, 32)
+
+[node name="World" type="Node2D" unique_id=1254822633]
+texture_filter = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=531040048]
+visible = false
+
+[node name="HeavenBg" type="Sprite2D" parent="." unique_id=1126598868]
+visible = false
+texture_filter = 1
+position = Vector2(414.5, 224.25)
+scale = Vector2(4.048611, 3.993827)
+texture = ExtResource("1_fj7yv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1431262940]
+visible = false
+position = Vector2(575, 325)
+scale = Vector2(7, 7)
+texture = ExtResource("2_tlwt5")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=965084356]
+position = Vector2(580, 637)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1845870460]
+shape = SubResource("RectangleShape2D_aqk2v")
+
+[node name="ColorRect" type="ColorRect" parent="Ground" unique_id=403948064]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -16.0
+offset_right = 640.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.8724307, 0.64353627, 0.4549688, 1)
+
+[node name="Platform" type="StaticBody2D" parent="." unique_id=1717080119]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform" unique_id=1088430025]
+shape = SubResource("RectangleShape2D_036b0")
+
+[node name="ColorRect" type="ColorRect" parent="Platform" unique_id=761189651]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.87058824, 0.6431373, 0.45490196, 1)
